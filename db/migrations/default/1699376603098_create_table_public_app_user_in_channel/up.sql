@@ -1,0 +1,1 @@
+CREATE TABLE "public"."app_user_in_channel" ("id" serial NOT NULL, "channel_id" integer NOT NULL, "app_user_id" integer NOT NULL, PRIMARY KEY ("id") , FOREIGN KEY ("channel_id") REFERENCES "public"."channel"("id") ON UPDATE restrict ON DELETE restrict, FOREIGN KEY ("app_user_id") REFERENCES "public"."app_user"("id") ON UPDATE restrict ON DELETE restrict);

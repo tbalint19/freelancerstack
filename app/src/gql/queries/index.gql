@@ -1,0 +1,30 @@
+mutation AddUser($username: String!) {
+  insert_app_user_one(object: {username: $username}) {
+    id
+  }
+}
+
+query GetUsers($username: String!) {
+  app_user(where: {username: {_eq: $username}}) {
+    id
+    username
+  }
+}
+
+mutation StartChannel($id: Int!) {
+  insert_channel(objects: {app_users: {data: {app_user_id: $id}}}) {
+    affected_rows
+  }
+}
+
+mutation SendMessage($content: String!) {
+  insert_message_one(object: {content: $content, app_user_in_channel_id: 1}) {
+    id
+  }
+}
+
+query GetMessages {
+  message {
+    content
+  }
+}

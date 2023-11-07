@@ -1,0 +1,32 @@
+{
+  "name": "app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "codegen": "graphql-codegen --config codegen.ts"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "3.3.1",
+    "@graphql-codegen/typescript": "3.0.4",
+    "@graphql-codegen/typescript-graphql-request": "4.5.9",
+    "@graphql-codegen/typescript-operations": "3.0.4",
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
+    "@tsconfig/svelte": "^5.0.0",
+    "svelte": "^4.0.5",
+    "svelte-check": "^3.4.6",
+    "tslib": "^2.6.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@trpc/client": "^10.43.1",
+    "@trpc/server": "^10.43.1",
+    "graphql-request": "~5.1.0",
+    "graphql-tag": "2.12.6"
+  }
+}

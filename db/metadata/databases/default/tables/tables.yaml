@@ -1,0 +1,4 @@
+- "!include public_app_user.yaml"
+- "!include public_app_user_in_channel.yaml"
+- "!include public_channel.yaml"
+- "!include public_message.yaml"

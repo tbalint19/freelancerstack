@@ -1,0 +1,11 @@
+table:
+  name: channel
+  schema: public
+array_relationships:
+  - name: app_users
+    using:
+      foreign_key_constraint_on:
+        column: channel_id
+        table:
+          name: app_user_in_channel
+          schema: public
